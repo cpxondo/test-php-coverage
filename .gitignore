@@ -57,4 +57,5 @@
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
 /phpunit.xml
+reports
 ###< symfony/phpunit-bridge ###
