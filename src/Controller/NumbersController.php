@@ -36,16 +36,16 @@ class NumbersController extends AbstractController
     }
 
     /**
-     * @Route("/substraction", name="app_substract_numbers", methods={"POST"})
+     * @Route("/division", name="app_division_numbers", methods={"POST"})
      */
-    public function substraction(Request $request): Response
+    public function division(Request $request): Response
     {
-        $this->logger->info("NumbersController#substractNumbers Request", ["request" => $request]);
+        $this->logger->info("NumbersController#divisionNumbers Request", ["request" => $request]);
 
         $firstValue = $request->request->get('first_value', null);
         $secondValue = $request->request->get('second_value', null);
 
-        $result = $this->service->addNumbers($firstValue, $secondValue);
+        $result = $this->service->divideNumbers($firstValue, $secondValue);
 
         return new Response($result, Response::HTTP_OK);
     }
